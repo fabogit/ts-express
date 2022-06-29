@@ -1,11 +1,20 @@
 // routes handlers
-import { Express, NextFunction, Request, Response } from "express";
+import { NextFunction, Request, Response } from "express";
 
 // import services
 
-function getBookHandler(req: Request, res: Response, next: NextFunction) {
-	//@ts-ignore
-	return res.send('GET request');
+/**
+ *
+ * @param req
+ * @param res
+ * @param next
+ * @returns
+ */
+function getBookHandler(req: Request, res: Response) {
+	const data = {
+		name: req.body.name
+	};
+	return res.send(data);
 }
 
 export default getBookHandler;

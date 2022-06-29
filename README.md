@@ -38,6 +38,17 @@ npm i -D typescript @types/node @types/express ts-node-dev
 	"dev": "ts-node-dev --respawn --transpile-only src/app.ts"
   },
 ```
+- Install Swagger Dependencies
+
+```
+npm i swagger-jsdoc swagger-ui-express
+```
+
+```
+npm i --save-dev @types/swagger-jsdoc @types/swagger-ui-express
+```
+
+in `tsconfig.json` set  `"resolveJsonModule": true`
 
 - Start server
 

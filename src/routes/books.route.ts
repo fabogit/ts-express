@@ -1,12 +1,25 @@
 // routing
-import { Express } from "express";
+import { Express, Request, Response } from "express";
 
 // import controllers
 import getBookHandler from "../controllers/books.controller";
 
 
+
 function routes(app: Express) {
-	app.get('/api/books/:bookId/:authorId', getBookHandler);
+
+/**
+   * @openapi
+   * /healthcheck:
+   *  get:
+   *     tags:
+   *     - Healthcheck
+   *     description: Responds if the app is up and running
+   *     responses:
+   *       200:
+   *         description: App is up and running
+   */
+	app.get('/healtcheck', (req, res) => res.sendStatus(200));
 }
 
 export default routes;
