@@ -1,5 +1,5 @@
 import express, { NextFunction, Request, Response } from "express";
-import routes from "./routes";
+import routes from "./routes/books.route";
 
 const app = express();
 
@@ -8,7 +8,7 @@ app.use(express.json());
 // parse url encoded req.body
 // app.use(express.urlencoded({ extended: true }));
 
-routes(app)
+routes(app);
 
 // Error handling
 async function throwsError() {
